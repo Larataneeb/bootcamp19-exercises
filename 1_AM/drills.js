@@ -4,19 +4,37 @@ const assert = require("assert");
 
 const tokenize = str => {
   // TODO - write a function which converts a multi-word string into an array of words
+  return str.split(" ");
 };
+console.log(tokenize("Hi my name is lara"))
 
 const reverse = str => {
   // TODO - write a function which reverses the string
+  splitString = str.split("");
+  reverseArray = splitString.reverse();
+  joinArray = reverseArray.join("");
+  return joinArray; 
 };
+console.log(reverse("hi"))
 
 const uniqueOnes = arr => {
   // TODO - write a function which returns the inputted array without duplicate elements
+  return Array.from(new Set(arr))
 };
+console.log(uniqueOnes("1,2,2,3"))
 
 const factorial = num => {
   // TODO - write a function which returns the factorial of a positive integer
+  if (num < 0) 
+        return -1;
+  else if (num == 0) 
+      return 1;
+  else {
+      return (num * factorial(num - 1));
+  }
 };
+console.log(factorial(3))
+
 
 const zip = (arr1, arr2) => {
   // TODO - write a function which combines two arrays into an array of 2-element arrays and returns -1
